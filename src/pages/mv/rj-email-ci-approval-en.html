@@ -1,0 +1,480 @@
+<!-- header -->
+{{>header-id
+  src="https://www.roojai.co.id/EmailTemplate/uploads/2025/12/header-car-inspection-approval.jpg"
+  alt_text="Terima kasih telah memilih Roojai untuk memproteksi mobilmu"
+}}
+
+{{>subject text="Thank you for trusting Roojai for your car’s protection" }}
+<!-- header -->
+
+<!-- body -->
+<container>
+  <row>
+    <columns small="12" align="center">
+      <p class="text-secondary">
+        <strong>
+          Hai <strong>{full_name}</strong>, 
+        </strong>
+      </p>
+
+      <spacer size="9"></spacer>
+
+      <!-- Scenario: car inspection within policy period -->
+      <p>
+        Your car inspection has been approved, and your car insurance policy is now activated as of {policyStartDate}.
+      </p>
+
+      <spacer size="9"></spacer>
+      <!-- Scenario: car inspection within policy period -->
+
+      <!-- Scenario: car inspection was done before policy start date -->
+      <p>
+        Your car inspection has been approved, and your car insurance policy will be activated as of {policyStartDate}
+      </p>
+
+      <spacer size="9"></spacer>
+      <!-- Scenario: car inspection was done before policy start date -->
+
+      <p>
+        You can find the report of car inspection result below.
+      </p>
+
+      <spacer size="9"></spacer>
+
+      <table class="tabular">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <strong>Insured Vehicle</strong> 
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              Car type &amp; brand 
+            </td>
+
+            <td>
+              {car_brand} {car_type}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              License plate number
+            </td>
+
+            <td>
+              {license_plate_number}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Chassis number
+            </td>
+
+            <td>
+              {VIN}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Vehicle use
+            </td>
+
+            <td>
+              {vehicle_use}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <spacer size="16"></spacer>
+
+      <table class="tabular">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <strong>Inspection Details</strong> 
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              Inspection date
+            </td>
+
+            <td>
+              {inspection_date}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Inspection method
+            </td>
+
+            <td>
+              {inspection_method}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Location of appointment
+            </td>
+
+            <td>
+              {appointment_place}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Odometer
+            </td>
+
+            <td>
+              {odometer}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <spacer size="16"></spacer>
+
+      <table class="tabular">
+        <thead>
+          <tr>
+            <th colspan="3">
+              <strong>Pre-Existing Damages</strong> 
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td width="33%">
+              Damage
+            </td>
+
+            <td width="33%">
+              Position of damage
+            </td>
+
+            <td width="33%">
+              Level of damage
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {damage}
+            </td>
+
+            <td>
+              {damage_position}
+            </td>
+
+            <td>
+              {damage_level}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <spacer size="5"></spacer>
+
+      <p>
+        <small>
+          <em>
+            Please note that the above preexisting damages are <strong>not covered</strong>.
+          </em>
+        </small>
+      </p>
+
+      <spacer size="27"></spacer>
+
+      <table class="tabular">
+        <thead>
+          <tr>
+            <th colspan="2">
+              Aditional notes regarding car accessories
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              -
+            </td>
+
+            <td>
+              -
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <spacer size="16"></spacer>
+
+      <table class="tabular">
+        <thead>
+          <tr>
+            <th colspan="3">
+              Damage level information
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              Damage level
+            </td>
+
+            <td>
+              Damage scoring
+            </td>
+
+            <td>
+              Damage type
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              A
+            </td>
+
+            <td>
+              1
+            </td>
+
+            <td>
+              Scratches
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              B
+            </td>
+
+            <td>
+              2
+            </td>
+
+            <td>
+              Dings/minor scuffs
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              C
+            </td>
+
+            <td>
+              3
+            </td>
+
+            <td>
+              Dents/big scuffs
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              D
+            </td>
+
+            <td>
+              4
+            </td>
+
+            <td>
+              Cracked/erosion of color/missing part/scratches, scuffs, dents or cracked on plastic material
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <spacer size="16"></spacer>
+
+      <table class="tabular">
+        <thead>
+          <tr>
+            <th colspan="2">
+              Additional notes regarding car accessories which are not covered
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              -
+            </td>
+
+            <td>
+              -
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <spacer size="27"></spacer>
+
+      <p>
+        Claim coverage refers to standard vehicle conditions; if there are any non-standard parts, the cost difference will be the responsibility of the policyholder.
+      </p>
+
+      <spacer size="9"></spacer>
+
+      <ul>
+        <li>
+          Access your insurance policy at anytime and anywhere via MyAccount within 15 minutes after your account is activated.
+        </li>
+
+        <li>
+          If you choose the policy in hardcopy, you will receive the policy documents within 10 working days.
+        </li>
+      </ul>
+
+      <spacer size="16"></spacer>
+
+      <p>
+        <strong>Important</strong>
+      </p>
+
+      <ol>
+        <li>
+          Make sure your vehicle information and coverage benefits are correct. If you cancel the policy after it has been issued, any premium refund will follow the applicable policy terms and conditions.
+        </li>
+
+        <li>
+          You can download your coverage summary and insurance guide online anytime and anywhere through MyAccount, or via the Roojai Indonesia app, available on the Play Store or Apple App Store.
+        </li>
+
+        <li>
+          Claims must be submitted within 5 days from the date the incident occurred by sending an email to <a href="mailto:mvclaims@roojai.co.id">mvclaims@roojai.co.id</a>. You can also contact Roojai Customer Service at <a href="tel:02150890821">021 5089 0821</a>. For more information about the claims process, please check <a href="https://www.roojai.co.id/how-to-claim/">https://www.roojai.co.id/how-to-claim/</a>.
+        </li>
+      </ol>
+
+      <spacer size="9"></spacer>
+    </columns>
+  </row>
+</container>
+<!-- body -->
+
+<!-- Scenario: customer eligible for Roojai Rewards -->
+<container>
+  <row>
+    <columns small="12" align="center">
+      <spacer size="33"></spacer>
+    </columns>
+  </row>
+</container>
+
+<container>
+  <row>
+    <columns small="12" align="center">
+      <callout class="points-reward">
+        <spacer size="11"></spacer>
+
+        <p>
+          Congrats! You’ve earned {reward_points} Roojai Rewards points, worth IDR{reward_value}!
+        </p>
+
+        <spacer size="9"></spacer>
+        
+        <p>
+          You can redeem your Roojai Reward points for vouchers from a variety of popular merchants through Giftee Box. <strong>Please keep an eye on your email inbox</strong>: We’ll send the redemption link straight to your email. Once you receive it, simply click and choose your favorite voucher.
+        </p>
+
+        <spacer size="27"></spacer>
+
+        <center>
+          <table class="tabel-width-auto">
+            <tr>
+              <td style="text-align: center;">
+                <table>
+                  <tr>
+                    <td style="text-align: right;">
+                      <img
+                        src="https://www.roojai.co.id/EmailTemplate/uploads/2025/12/icon-gift.png" style="margin-left: auto;"
+                        width="64"
+                        height="64"
+                      />
+                    </td>
+
+                    <td style="vertical-align: middle;">
+                      <p>
+                        <strong>&nbsp;&nbsp;Get an Extra IDR 100,000 Voucher!</strong>
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </center>
+
+        <spacer size="13"></spacer>
+
+        <p>
+          You can also receive an additional Rp100,000 voucher for Tokopedia, Pertamina, Grab, MAP, or Indomaret via Giftee Box by leaving a review on Google for Roojai through the button below. 
+        </p>
+
+         <spacer size="26"></spacer>
+
+        <center>
+          <button href="#" class="primary large radius text-center" align="center">
+            <span class="text-center">
+              Start Google Review
+            </span>
+          </button>
+        </center>
+
+        <spacer size="32"></spacer>
+
+        <img src="https://www.roojai.co.id/EmailTemplate/uploads/2025/12/roojai-rewards-20251219.jpg" alt="Tukarkan poinnya untuk voucher Tokopedia & Pertamina" width="450" />
+
+        <spacer size="5"></spacer>
+      </callout>
+    </columns>
+  </row>
+</container>
+
+<container>
+  <row>
+    <columns small="12" align="center">
+      <spacer size="39"></spacer>
+    </columns>
+  </row>
+</container>
+<!-- Scenario: customer eligible for Roojai Rewards -->
+
+<container>
+  <row>
+    <columns small="12" align="center">
+      <p>
+        If you need assistance or further information, please contact us at <a href="tel:02150890821">021 5089 0821</a>.
+      </p>
+
+      <spacer size="58"></spacer>
+    </columns>
+  </row>
+</container>
+
+<!-- footer -->
+{{>footer-mv-en }}
+<!-- footer -->

@@ -1,0 +1,100 @@
+<!-- header -->
+{{>header-id
+  src="https://www.roojai.co.id/EmailTemplate/uploads/2025/12/header-car-inspection-cancel.jpg"
+  alt_text="We regret that your car insurance application has been cancelled"
+}}
+<!-- header -->
+
+<!-- subject -->
+{{>subject
+  text="We regret that your car insurance application has been cancelled "
+}}
+<!-- subject -->
+
+<!-- policy number -->
+<container>
+  <row
+    class="collapse"
+  >
+    <columns
+      small="12"
+    >
+      <callout
+        class="primary"
+      >
+        <spacer size="18"></spacer>
+
+        <p
+          class="text-center"
+        >
+          <strong>
+            Car Insurance application no.
+          </strong>
+        </p>
+
+        <p
+          class="text-center"
+        >
+          <strong
+            class="h4"
+          >
+            {policy_number}
+          </strong>
+        </p>
+
+        <spacer size="14"></spacer>
+      </callout>
+    </columns>
+  </row>
+</container>
+<!-- policy number -->
+
+<!-- body -->
+<container>
+  <spacer size="60"></spacer>
+
+  <row>
+    <columns
+      small="12"
+    >
+      <p>
+        Hi <strong>{full_name}</strong>,
+      </p>
+
+      <spacer size="9"></spacer>
+
+      <p>
+        We are sorry to inform you that your car insurance application has been cancelled because of the failure to complete the required car inspection.
+      </p>
+
+      <spacer size="9"></spacer>
+
+      <!-- Scenario: payment by CC -->
+      <p>
+        The premium amount of IDR [number] will be refunded within max. 5 working days to your credit card.
+      </p>
+
+      <spacer size="9"></spacer>
+      <!-- Scenario: payment by CC -->
+
+      <!-- Scenario: payment by VA -->
+      <p>
+        Our contact center team will contact you to confirm your bank account number. We will refund the premium in the amount of IDR {number} within max. 5 working days after the account number is confirmed.
+      </p>
+
+      <spacer size="9"></spacer>
+      <!-- Scenario: payment by VA -->
+
+      <p>
+        If you have any questions or need further information, please contact us at <a href="tel:02150890821">021 5089 0821</a>.
+      </p>
+    </columns>
+  </row>
+
+  <spacer size="58"></spacer>
+</container>
+<!-- body -->
+
+<!-- footer -->
+{{>footer-mv-id }}
+<!-- footer -->
