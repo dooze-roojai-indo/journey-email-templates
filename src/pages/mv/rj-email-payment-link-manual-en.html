@@ -1,0 +1,206 @@
+<!-- header -->
+{{>header-id
+  src="https://www.roojai.co.id/EmailTemplate/uploads/2025/12/header-payment-mv.jpg"
+  alt_text="Payment information for your car insurance policy"
+}}
+<!-- header -->
+
+<!-- subject -->
+{{>subject
+  text="Payment information for your car insurance policy"
+}}
+<!-- subject -->
+
+<!-- quotation number -->
+{{>quotation-number-en }}
+<!-- quotation number -->
+
+<!-- body -->
+<container>
+  <spacer size="60"></spacer>
+
+  <row>
+    <columns
+      small="12"
+    >
+      <p>
+        Hi <strong>{full_name}</strong>,
+      </p>
+
+      <spacer size="9"></spacer>
+
+      <p>
+        Here are the details of your car insurance policy order:
+      </p>
+
+      <spacer size="25"></spacer>
+
+      <table class="tabular">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <strong>Primary Driver Information</strong> 
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              Name
+            </td>
+
+            <td>
+              {full_name}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Age
+            </td>
+
+            <td>
+              {age}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Marital status
+            </td>
+
+            <td>
+              {marital_status}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Driving license held for
+            </td>
+
+            <td>
+              {years_with_license} year
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <spacer size="16"></spacer>
+
+      <table class="tabular">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <strong>Vehicle Information</strong> 
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td width="50%">
+              Number of claims in the last 12 Months
+            </td>
+
+            <td>
+              {number} times
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Covered car
+            </td>
+
+            <td>
+              {car_year} {car_brand} {car_model}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Odometer
+            </td>
+
+            <td>
+              {odometer}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <spacer size="16"></spacer>
+
+      <table class="tabular">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <strong>Coverage Details</strong> 
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              Your chosen benefits
+            </td>
+
+            <td>
+              <ul>
+                <li>{list_of_coverage_item}</li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Maximum coverage amount
+            </td>
+
+            <td>
+              IDR{sum_insured}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <spacer size="41"></spacer>
+
+      <p>
+        To complete your payment, simply click below 
+      </p>
+
+      <spacer size="17"></spacer>
+    </columns>
+  </row>
+</container>
+<!-- body -->
+
+<!-- CTA -->
+{{>cta text="Make Payment"}}
+<!-- CTA -->
+
+<!-- body -->
+<container>
+  <spacer size="60"></spacer>
+
+  <row>
+    <columns
+      small="12"
+    >
+      <p>
+        If you need any assistance or further information, please contact us at <a href="tel:02150890821">021 5089 0821</a>.
+      </p>
+
+      <spacer size="58"></spacer>
+    </columns>
+  </row>
+</container>
+<!-- body -->
+
+<!-- footer -->
+{{>footer-mv-en }}
+<!-- footer -->

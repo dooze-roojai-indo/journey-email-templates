@@ -1,0 +1,258 @@
+<!-- header -->
+{{>header-id
+  src="https://www.roojai.co.id/EmailTemplate/uploads/2025/12/header-payment-mv.jpg"
+  alt_text="Get protected now!"
+}}
+<!-- header -->
+
+<!-- subject -->
+{{>subject
+  text="Get protected now!"
+}}
+<!-- subject -->
+
+<!-- quotation number -->
+{{>quotation-number-en }}
+<!-- quotation number -->
+
+<!-- body -->
+<container>
+  <spacer size="60"></spacer>
+
+  <row>
+    <columns
+      small="12"
+    >
+      <p>
+        Hi <strong>{full_name}</strong>,
+      </p>
+
+      <spacer size="9"></spacer>
+
+      <p>
+        We noticed that you were just one step away from completing your car insurance purchase from Roojai Indonesia. Your protection is important, and we want to make sure you don’t miss out on the great benefits you would get with a Comprehensive Car Insurance from Roojai: 
+      </p>
+
+      <spacer size="9"></spacer>
+
+      <ol>
+        <li>
+          Special price for annual payments
+        </li>
+
+        <li>
+          Dedicated claim service personnel
+        </li>
+
+        <li>
+          Instalment payment options with credit card or virtual account
+        </li>
+
+        <li>
+          Car inspection with video call
+        </li>
+
+        <li>
+          800+ trusted partner garages
+        </li>
+
+        <li>
+          Six months repair warranty &amp; original spare parts
+        </li>
+      </ol>
+
+      <spacer size="25"></spacer>
+
+      <table class="tabular">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <strong>Primary Driver Information</strong> 
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              Name
+            </td>
+
+            <td>
+              {full_name}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Age
+            </td>
+
+            <td>
+              {age}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Marital status
+            </td>
+
+            <td>
+              {marital_status}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Driving license held for
+            </td>
+
+            <td>
+              {years_with_license} year
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <spacer size="16"></spacer>
+
+      <table class="tabular">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <strong>Vehicle Information</strong> 
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td width="50%">
+              Number of claims in the last 12 Months
+            </td>
+
+            <td>
+              {number} times
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Covered car
+            </td>
+
+            <td>
+              {car_year} {car_brand} {car_model}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Odometer
+            </td>
+
+            <td>
+              {odometer}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <spacer size="16"></spacer>
+
+      <table class="tabular">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <strong>Coverage Details</strong> 
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              Your chosen benefits
+            </td>
+
+            <td>
+              <ul>
+                <li>{list_of_coverage_item}</li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Maximum coverage amount
+            </td>
+
+            <td>
+              IDR{sum_insured}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <spacer size="25"></spacer>
+
+      <!-- Scenario: customer eligible for instalment -->
+      <p>
+        <strong>Instalment Option</strong>
+      </p>
+
+      <p>
+        Easily manage your expense with 6x instalmenta
+        IDR {monthly_premium} x 6 months
+        Total instalment price: IDR {6*monthly_premium}
+      </p>
+
+      <spacer size="9"></spacer>
+      <!-- Scenario: customer eligible for instalment -->
+      
+      <p>
+        <strong>Full Payment Option</strong>
+      </p>
+
+      <p>
+        Your special price for full payment is only
+        IDR {annualPremium} / year
+      </p>
+
+      <spacer size="41"></spacer>
+
+      <p class="text-center">
+        To complete your payment, simply click below:
+      </p>
+
+      <spacer size="17"></spacer>
+    </columns>
+  </row>
+</container>
+<!-- body -->
+
+<!-- CTA -->
+{{>cta text="Make Payment"}}
+<!-- CTA -->
+
+<!-- body -->
+<container>
+  <spacer size="60"></spacer>
+
+  <row>
+    <columns
+      small="12"
+    >
+      <p>
+        If you need any assistance or further information, please contact us at <a href="tel:02150890821">021 5089 0821</a>.
+      </p>
+
+      <spacer size="58"></spacer>
+    </columns>
+  </row>
+</container>
+<!-- body -->
+
+<!-- footer -->
+{{>footer-mv-en }} -->

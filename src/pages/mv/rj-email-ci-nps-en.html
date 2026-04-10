@@ -1,0 +1,71 @@
+<!-- header -->
+{{>header-id
+  src="https://www.roojai.co.id/EmailTemplate/uploads/2025/12/header-car-inspection-nps.jpg"
+  alt_text="Bagaimana proses inspeksi mobilmu? Berikan nilainya di sini"
+}}
+
+{{>subject
+  text="How did your car inspection go?<br />Drop your rating here"
+}}
+<!-- header -->
+
+<!-- policy number -->
+{{>policy-number-en }}
+<!-- policy number -->
+
+<!-- body -->
+<container>
+  <spacer size="60"></spacer>
+
+  <row>
+    <columns small="12" align="center">
+      <p>
+        Hai {full_name},
+      </p>
+
+      <spacer size="9"></spacer>
+
+      <p>
+        Thank you completing your car inspection. Please rate your car inspection experience by clicking the button below. Your feedback helps us improve our service.
+      </p>
+
+      <spacer size="26"></spacer>
+    </columns>
+  </row>
+</container>
+<!-- body -->
+
+<!-- icons -->
+<container>
+  <row>
+    <columns>
+      <h3>
+        Car Inspection Service Survey  
+      </h3>
+
+      <spacer size="9"></spacer>
+    </columns>
+  </row>
+
+  {{> nps-rating-10 }}
+
+  <spacer size="29"></spacer>
+</container>
+<!-- icons -->
+
+<!-- body -->
+<container>
+  <row>
+    <columns small="12" align="center">
+      <p>
+        If you need help or further information, please contact us at <a href="tel:02150890821">021 5089 0821</a>.
+      </p>
+
+      <spacer size="58"></spacer>
+    </columns>
+  </row>
+</container>
+
+<!-- footer -->
+{{>footer-protection-id }}
+<!-- footer -->

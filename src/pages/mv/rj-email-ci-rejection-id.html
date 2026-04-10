@@ -1,0 +1,220 @@
+<!-- header -->
+{{>header-id
+  src="https://www.roojai.co.id/EmailTemplate/uploads/2025/12/header-car-inspection-cancel.jpg"
+  alt_text="Terima kasih telah memilih Roojai untuk memproteksi mobilmu"
+}}
+
+{{>subject
+  text="Maaf, permohonan polis asuransimu<br />tidak dapat dilanjutkan"
+}}
+<!-- header -->
+
+<!-- body -->
+<container>
+  <row>
+    <columns small="12" align="center">
+      <p class="text-secondary">
+        <strong>
+          Hai <strong>{full_name}</strong>, 
+        </strong>
+      </p>
+
+      <spacer size="9"></spacer>
+
+      <p>
+        Terima kasih atas antusiasmu dalam memberikan proteksi untuk mobilmu bersama Roojai. Namun, berdasarkan hasil inspeksi mobil yang telah dilakukan melalui video call, kami ingin menginformasikan bahwa permohonan asuransi mobilmu tidak dapat dilanjutkan.
+      </p>
+
+      <spacer size="9"></spacer>
+
+      <p>
+        Kamu bisa cek detail laporan hasil inspeksi mobil di bawah ini.
+      </p>
+
+      <spacer size="9"></spacer>
+
+      <table class="tabular">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <strong>Kendaraan Tertanggung</strong> 
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              Merk &amp; tipe kendaraan 
+            </td>
+
+            <td>
+              {car_brand} {car_type}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Nomor polisi
+            </td>
+
+            <td>
+              {license_plate_number}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Nomor rangka
+            </td>
+
+            <td>
+              {VIN}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Penggunaan kendaraan
+            </td>
+
+            <td>
+              {vehicle_use}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <spacer size="16"></spacer>
+
+      <table class="tabular">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <strong>Keterangan Inspeksi</strong> 
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              Tanggal inspeksi
+            </td>
+
+            <td>
+              {inspection_date}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Metode inspeksi
+            </td>
+
+            <td>
+              {inspection_method}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Lokasi perjanjian
+            </td>
+
+            <td>
+              {appointment_place}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Odometer
+            </td>
+
+            <td>
+              {odometer}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <spacer size="16"></spacer>
+
+      <table class="tabular">
+        <thead>
+          <tr>
+            <th colspan="3">
+              <strong>Kerusakan yang Sudah Ada</strong> 
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td width="33%">
+              <strong>
+                Kerusakan
+              </strong>
+            </td>
+
+            <td width="33%">
+              <strong>
+                Posisi kerusakan
+              </strong>
+            </td>
+
+            <td width="33%">
+              <strong>
+                Tingkat kerusakan
+              </strong> 
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {damage}
+            </td>
+
+            <td>
+              {damage_position}
+            </td>
+
+            <td>
+              {damage_level}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <spacer size="29"></spacer>
+
+      <!-- Scenario: payment by CC -->
+      <p>
+        Premi yang telah kamu bayarkan sebesar Rp{firstPremiumPaid} akan dikembalikan ke kartu kreditmu maksimal dalam 5 hari kerja.
+      </p>
+
+      <spacer size="9"></spacer>
+      <!-- Scenario: payment by CC -->
+
+      <!-- Scenario: payment by VA -->
+      <p>
+        Tim contact center kami akan segera menghubungimu untuk konfirmasi nomor rekeningmu. Pengembalian premi yang sudah dibayarkan sebesar Rp{firstPremiumPaid} akan dilakukan maks. 5 hari kerja setelah nomor rekening dikonfirmasi.
+      </p>
+
+      <spacer size="9"></spacer>
+      <!-- Scenario: payment by VA -->
+
+      <p>
+        Jika memiliki pertanyaan atau membutuhkan informasi lebih lanjut, silakan hubungi kami di <a href="tel:02150890821">021 5089 0821</a>.
+      </p>
+
+      <spacer size="58"></spacer>
+    </columns>
+  </row>
+</container>
+<!-- body -->
+
+<!-- footer -->
+{{>footer-mv-id }}
+<!-- footer -->
