@@ -52,12 +52,12 @@ function clean(done) {
 // Then parse using Inky templates
 function pages() {
   return gulp.src([
-      '!src/pages/**/*.html',
+      'src/pages/**/*.html',
       '!src/pages/archive/**/*.html',
       '!src/pages/agent/**/*.html',
       '!src/pages/ci/**/*.html',
       '!src/pages/hcp/**/*.html',
-      'src/pages/ipmi/**/*.html',
+      '!src/pages/ipmi/**/*.html',
       '!src/pages/mv/**/*.html',
       '!src/pages/pa/**/*.html',
       '!src/pages/reward/**/*.html',
