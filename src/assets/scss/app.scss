@@ -1,4 +1,149 @@
 @import 'settings';
 @import 'foundation-emails';
+@import 'utilities';
 
-@import 'template/template';
+* {
+  word-break: keep-all;
+  hyphens: none;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+// Typography
+// ---------
+a {
+  overflow-wrap: anywhere;
+}
+
+// Table
+// --------
+.tabular {
+  border: 1px solid #afafaf;
+
+  th,
+  td {
+    font-size: 14px!important;
+  }
+
+  thead th {
+    background-color: #f3f3f3;
+    padding: 4px;
+    border: 1px solid #afafaf;
+  }
+
+  tbody {
+    tr {
+      &:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
+    }
+
+    td {
+      border-bottom: 1px solid #afafaf;
+      border-right: 1px solid #afafaf;
+      border-collapse: collapse;
+      padding: 4px;
+      font-size: 14px!important;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
+
+.renewal {
+  thead {
+    th {
+      background-color: #fff;
+      padding: 6px;
+      border: 1px solid #afafaf;
+
+      &:first-child {
+        border-right-color: #fff;
+      }
+    }
+  }
+}
+
+// Faux Table
+// ---------
+.container {
+  &.faux-table {
+    border: 1px solid #afafaf;
+    border-bottom: none;
+
+    .row {
+      border-bottom: 1px solid #afafaf;
+    }
+    
+    .columns {
+      th {
+        padding-top: 8px!important;
+        padding-bottom: 8px!important;
+      }
+      
+      &.first {
+        p {
+          width: 180px!important;}
+      }
+    }
+  }
+}
+
+// Callout
+// --------
+.callout {
+  .callout-inner {
+    padding: 16px;
+    background: #F1F6FE!important;
+    border-color:  #C2D9FF!important;
+  }
+}
+
+// Footer
+// ---------
+.wrapper {
+  &.footer {
+    .container {
+      background: #F5F5F5;
+    }
+    
+    .wrapper-inner {
+      tbody {
+        background: #F5F5F5;
+
+        tbody {
+          background: transparent;
+        }
+      }
+    }
+
+    .menu {
+      .menu-item {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 10px!important;
+        padding-left: 0!important;
+      }
+      
+      img {
+        margin: 0!important;;
+      }
+    }
+  }
+}
+
+
+// Et Cetera
+// ---------
+hr {
+  margin: 0;
+  padding: 0;
+  border: mone;
+  border-top: 1px solid #afafaf;
+}

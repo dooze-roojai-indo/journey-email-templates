@@ -1,17 +1,17 @@
-import gulp     from 'gulp';
-import plugins  from 'gulp-load-plugins';
-import browser  from 'browser-sync';
-import rimraf   from 'rimraf';
-import panini   from 'panini';
-import yargs    from 'yargs';
+import gulp from 'gulp';
+import plugins from 'gulp-load-plugins';
+import browser from 'browser-sync';
+import rimraf from 'rimraf';
+import panini from 'panini';
+import yargs from 'yargs';
 import lazypipe from 'lazypipe';
-import inky     from 'inky';
-import fs       from 'fs';
-import siphon   from 'siphon-media-query';
-import path     from 'path';
-import merge    from 'merge-stream';
-import beep     from 'beepbeep';
-import colors   from 'colors';
+import inky from 'inky';
+import fs from 'fs';
+import siphon from 'siphon-media-query';
+import path from 'path';
+import merge from 'merge-stream';
+import beep from 'beepbeep';
+import colors from 'colors';
 
 const $ = plugins();
 
@@ -52,17 +52,8 @@ function clean(done) {
 // Then parse using Inky templates
 function pages() {
   return gulp.src([
-      'src/pages/**/*.html',
-      '!src/pages/archive/**/*.html',
-      '!src/pages/agent/**/*.html',
-      '!src/pages/ci/**/*.html',
-      '!src/pages/hcp/**/*.html',
-      '!src/pages/ipmi/**/*.html',
-      '!src/pages/mv/**/*.html',
-      '!src/pages/pa/**/*.html',
-      '!src/pages/reward/**/*.html',
-      '!src/pages/voucher/**/*.html'
-    ])
+    'src/pages/IN-4314/*.html',
+  ])
     .pipe(panini({
       root: 'src/pages',
       layouts: 'src/layouts',
@@ -138,7 +129,7 @@ function inliner(css) {
     })
     .pipe($.replace, '<!-- <style> -->', `<style>${mqCss}</style>`)
     .pipe($.replace, '<!-- <style>bullet</style> -->', `<style>body{hyphens: none!important;}ul.custom-bullet{list-style-type:none;margin:0;padding:0;padding-left:25px;}ul.custom-bullet>li:before{content:"•";color:#ff5011;font-size:1.125rem;font-weight:bold;display:inline-block;width:1rem;margin-left:-1.375rem;}</style><style>ol.custom-bullet{list-style-type:none;counter-reset: li;margin: 0;padding:0;padding-left:25px;}ol.custom-bullet>li{counter-increment: li}ol.custom-bullet>li::before{content:counter(li)".";color: #ff5011;font-size:1rem;font-weight:normal;display:inline-block;margin-left: -1.375rem}</style>`)
-    .pipe($.replace, '<link rel="stylesheet" type="text/css" href="css/app.css">', '')
+    .pipe($.replace, '<link rel="stylesheet" type="text/css" href="./dist/css/app.css">', '')
     .pipe($.htmlmin, {
       keepClosingSlash: true,
       collapseWhitespace: false,
@@ -152,7 +143,7 @@ function inliner(css) {
 function creds(done) {
   var configPath = './config.json';
   try { CONFIG = JSON.parse(fs.readFileSync(configPath)); }
-  catch(e) {
+  catch (e) {
     beep();
     console.log('[AWS]'.bold.red + ' Sorry, there was an issue locating your config.json. Please see README.md');
     process.exit();
@@ -184,7 +175,7 @@ function litmus() {
   var awsURL = !!CONFIG && !!CONFIG.aws && !!CONFIG.aws.url ? CONFIG.aws.url : false;
 
   return gulp.src('dist/**/*.html')
-    .pipe($.if(!!awsURL, $.replace(/=('|")(\/?assets\/img)/g, "=$1"+ awsURL)))
+    .pipe($.if(!!awsURL, $.replace(/=('|")(\/?assets\/img)/g, "=$1" + awsURL)))
     .pipe($.litmus(CONFIG.litmus))
     .pipe(gulp.dest('dist'));
 }
@@ -198,7 +189,7 @@ function mail() {
   }
 
   return gulp.src('dist/**/*.html')
-    .pipe($.if(!!awsURL, $.replace(/=('|")(\/?assets\/img)/g, "=$1"+ awsURL)))
+    .pipe($.if(!!awsURL, $.replace(/=('|")(\/?assets\/img)/g, "=$1" + awsURL)))
     .pipe($.mail(CONFIG.mail))
     .pipe(gulp.dest('dist'));
 }
@@ -210,7 +201,7 @@ function zip() {
 
   function getHtmlFiles(dir) {
     return fs.readdirSync(dir)
-      .filter(function(file) {
+      .filter(function (file) {
         var fileExt = path.join(dir, file);
         var isHtml = path.extname(fileExt) == ext;
         return fs.statSync(fileExt).isFile() && isHtml;
@@ -219,7 +210,7 @@ function zip() {
 
   var htmlFiles = getHtmlFiles(dist);
 
-  var moveTasks = htmlFiles.map(function(file){
+  var moveTasks = htmlFiles.map(function (file) {
     var sourcePath = path.join(dist, file);
     var fileName = path.basename(sourcePath, ext);
 
@@ -230,14 +221,14 @@ function zip() {
       }));
 
     var moveImages = gulp.src(sourcePath)
-      .pipe($.htmlSrc({ selector: 'img'}))
+      .pipe($.htmlSrc({ selector: 'img' }))
       .pipe($.rename(function (currentpath) {
         currentpath.dirname = path.join(fileName, currentpath.dirname.replace('dist', ''));
         return currentpath;
       }));
 
     return merge(moveHTML, moveImages)
-      .pipe($.zip(fileName+ '.zip'))
+      .pipe($.zip(fileName + '.zip'))
       .pipe(gulp.dest('dist'));
   });
 

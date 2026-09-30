@@ -1,0 +1,93 @@
+// Border Utilities
+// ---------
+.border-right-medium-gray {
+  border-right: 1px solid #ccc;
+}
+
+// Font Utilities
+// ---------
+.font-size-12px {
+  font-size: 12px !important;
+}
+
+.font-size-14px {
+  font-size: 14px!important;
+}
+
+.font-size-16px {
+  font-size: 16px!important;
+}
+
+.font-size-20px {
+  font-size: 20px!important;
+}
+
+// List Utilities
+// ---------
+ol, ul {
+  margin: 0 0 16px;
+  padding-left: 20px;
+}
+
+// Positioning Utilities
+// ---------
+.veritcal-align-middle {
+  vertical-align: middle!important;
+}
+
+// Spacing Utilities
+// ---------
+.mb-0 {
+  margin-bottom: 0!important;
+}
+
+.mb-16px {
+  margin-bottom: 16px!important;
+}
+
+.mb-32px {
+  margin-bottom: 32px!important;
+}
+
+.mb-48px {
+  margin-bottom: 48px!important;
+}
+
+// Text Utilities
+// ---------
+.text-center {
+  text-align: center!important;
+}
+
+.text-left {
+  text-align: left!important;
+}
+
+.text-right {
+  text-align: right!important;
+}
+
+.footer {
+  p {
+    color: #8D8D8D!important;
+  }
+
+  .title {
+    position: relative;
+    padding-bottom:4px;
+
+    &::after {
+      content: '';
+      width: 100px;
+      height: 0;
+      border-bottom: 1px solid #8D8D8D;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .telephone {
+    font-size: 22px;
+  }
+}
