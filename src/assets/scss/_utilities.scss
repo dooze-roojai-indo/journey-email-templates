@@ -4,6 +4,11 @@
   border-right: 1px solid #ccc;
 }
 
+//
+.text-white {
+  color: #ffffff!important;
+}
+
 // Font Utilities
 // ---------
 .font-size-12px {
@@ -37,9 +42,36 @@ ol, ul {
 
 // Spacing Utilities
 // ---------
+.p-4px {
+  padding-left: 4px!important;
+  padding-right: 4px!important;
+  padding-top: 4px!important;
+  padding-bottom: 4px!important;
+}
+
+.px-4px {
+  padding-left: 4px!important;
+  padding-right: 4px!important;
+}
+
+.py-2px {
+  padding-top: 2px!important;
+  padding-bottom: 2px!important;
+}
+
+.mx-auto {
+  margin-left: auto!important;
+  margin-right: auto!important;
+}
+
 .mb-0 {
   margin-bottom: 0!important;
 }
+
+.mb-8px {
+  margin-bottom: 8px!important;
+}
+
 
 .mb-16px {
   margin-bottom: 16px!important;
