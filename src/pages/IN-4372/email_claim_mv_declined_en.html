@@ -1,0 +1,61 @@
+<!-- header -->
+{{> header-id src="https://roojai.co.id/EmailTemplate/uploads/2025/07/header-termination-20250730.jpg" alt_text="We Are Unable to Proceed with Your Claim"}}
+<!-- header -->
+
+<!-- subject -->
+{{> subject text="We Are Unable to Proceed with Your Claim"}}
+<!-- subject -->
+
+<!-- body -->
+<container>
+  <row>
+    <columns small="12" align="center">
+      <p>
+        Dear Mr./Ms. {Account_Name__c},
+      </p>
+
+      <p>
+        Policy Number: <strong>{Claimable_Quote__r.Name}</strong>
+        <br>
+        Claim Number: <strong>{Name}</strong>
+      </p>
+
+      <p>
+        Please refer to the attached document for the reason your claim was declined:
+        
+        <br />
+        
+        <a href="{PDF Claim Declined}">Download PDF</a>
+      </p>
+
+      <p>
+        This decision is based on our Claims Team’s assessment and the terms and conditions of your insurance policy.
+      </p>
+
+      <p>
+        If you need further clarification regarding this decision, please call our Claims Hotline at 021 5089 0821 or email <a href="mailto:service@roojai.co.id">service@roojai.co.id</a>. Our Claims Team will be happy to assist you.
+      </p>
+
+      <p>
+        Warm regards,
+        <br>
+        Roojai Indonesia
+      </p>
+    </columns>
+  </row>
+</container>
+<!-- body -->
+
+<!-- spacer -->
+<container>
+  <row>
+    <columns small="12" align="center">
+      <spacer size="48" />
+    </columns>
+  </row>
+</container>
+<!-- spacer -->
+
+<!-- footer -->
+{{> footer-en}}
+<!-- footer -->

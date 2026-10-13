@@ -52,7 +52,7 @@ function clean(done) {
 // Then parse using Inky templates
 function pages() {
   return gulp.src([
-    'src/pages/IN-4373/*.html',
+    'src/pages/IN-4314/*.html',
   ])
     .pipe(panini({
       root: 'src/pages',
